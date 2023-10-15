@@ -32,6 +32,7 @@ const lookup = {
 };
 
 function rot13(encodedStr) {
+	encodedStr=encodedStr.toUpperCase();
   let str="";
 	for(let i=0;i<encodedStr.length;i++)
 		{
