@@ -32,11 +32,19 @@ const lookup = {
 };
 
 function rot13(encodedStr) {
-	encodedStr=encodedStr.toUpperCase();
-  let str="";
-	for(let i=0;i<encodedStr.length;i++)
+	encodedStr=encodedStr.toUpperCase(); // RA
+  let str=""; //
+	for(let i=0;i<encodedStr.length;i++) //0<3
 		{
-			str=str+lookup[encodedStr[i]];
+			if(lookup[encodedStr[i]]) //
+			{
+				str=str+lookup[encodedStr[i]];
+			}
+			else
+			{
+				str=str+encodedStr[i];
+			}
+			
 		}
 	return str;
 }
